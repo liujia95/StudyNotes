@@ -9,7 +9,7 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 
 /**
- * 封装了右侧的索引条及其相关的动作
+ * 封装了右侧的索引条及其相关的动作的Listview
  * Created by Administrator on 2016/2/27 20:41.
  */
 public class IndexableListView extends ListView {
