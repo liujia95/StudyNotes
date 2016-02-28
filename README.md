@@ -5,4 +5,5 @@
 ----------
 - 2015.2.28
 > 视频教程：[Android高级特效-索引](http://www.imooc.com/learn/493)
+> 
 > 博客：[Android的高级特效—索引](http://blog.csdn.net/lockjo/article/details/50759937)
