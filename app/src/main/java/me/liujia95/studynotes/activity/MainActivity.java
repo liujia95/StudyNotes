@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private void initData() {
         mItems = new ArrayList<>();
         mItems.add("2016.2.27 索引");
+        mItems.add("2016.3.02 键盘面板冲突");
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,mItems);
         mListview.setAdapter(adapter);
@@ -53,8 +54,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         switch (position) {
             case 0:
-                Intent intent = new Intent(this, IndexableListViewActivity.class);
-                startActivity(intent);
+                Intent intent0 = new Intent(this, IndexableListViewActivity.class);
+                startActivity(intent0);
+                break;
+            case 1:
+                Intent intent1 = new Intent(this,me.liujia95.studynotes._2016_3_02.utils.MainActivity.class);
+                startActivity(intent1);
                 break;
         }
     }
