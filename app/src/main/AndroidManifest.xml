@@ -32,6 +32,8 @@
         <activity
             android:name="._2016_3_02.utils.TranslucentActivity"
             android:theme="@style/TranslucentFullSceenTheme"/>
+
+        <activity android:name="._2016_3_03.SlideBarActivity"/>
     </application>
 
 </manifest>

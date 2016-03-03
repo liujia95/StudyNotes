@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#ffffff"
+              android:orientation="horizontal">
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:scrollbars="none"
+        />
+
+    <me.liujia95.studynotes._2016_3_03.view.SlideBar
+        android:id="@+id/slidebar"
+        android:layout_width="20dp"
+        android:layout_height="fill_parent"
+        android:background="#66EBEBEB"
+        />
+</LinearLayout>

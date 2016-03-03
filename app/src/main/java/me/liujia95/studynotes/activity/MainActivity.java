@@ -15,6 +15,7 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 import me.liujia95.studynotes.R;
 import me.liujia95.studynotes._2016_2_27.IndexableListViewActivity;
+import me.liujia95.studynotes._2016_3_03.SlideBarActivity;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         mItems = new ArrayList<>();
         mItems.add("2016.2.27 索引");
         mItems.add("2016.3.02 键盘面板冲突");
+        mItems.add("2016.3.03 首字母分类索引");
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,mItems);
         mListview.setAdapter(adapter);
@@ -61,6 +63,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 Intent intent1 = new Intent(this,me.liujia95.studynotes._2016_3_02.utils.MainActivity.class);
                 startActivity(intent1);
                 break;
+            case 2:
+                Intent intent = new Intent(this, SlideBarActivity.class);
+                startActivity(intent);
         }
     }
 }
