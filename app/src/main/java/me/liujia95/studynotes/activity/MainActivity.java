@@ -16,6 +16,7 @@ import butterknife.InjectView;
 import me.liujia95.studynotes.R;
 import me.liujia95.studynotes._2016_2_27.IndexableListViewActivity;
 import me.liujia95.studynotes._2016_3_03.SlideBarActivity;
+import me.liujia95.studynotes._2016_3_04.TestPointActivity;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
@@ -43,8 +44,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         mItems.add("2016.2.27 索引");
         mItems.add("2016.3.02 键盘面板冲突");
         mItems.add("2016.3.03 首字母分类索引");
+        mItems.add("2016.3.04 未读消息小红点");
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,mItems);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, mItems);
         mListview.setAdapter(adapter);
     }
 
@@ -60,12 +62,16 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 startActivity(intent0);
                 break;
             case 1:
-                Intent intent1 = new Intent(this,me.liujia95.studynotes._2016_3_02.utils.MainActivity.class);
+                Intent intent1 = new Intent(this, me.liujia95.studynotes._2016_3_02.utils.MainActivity.class);
                 startActivity(intent1);
                 break;
             case 2:
-                Intent intent = new Intent(this, SlideBarActivity.class);
-                startActivity(intent);
+                Intent intent2 = new Intent(this, SlideBarActivity.class);
+                startActivity(intent2);
+            case 3:
+                Intent intent3 = new Intent(this, TestPointActivity.class);
+                startActivity(intent3);
+                break;
         }
     }
 }

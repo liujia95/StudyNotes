@@ -8,7 +8,7 @@ import me.liujia95.studynotes._2016_3_03.bean.DataBean;
 
 public class ListUtil {
     public static  void sortList(List<DataBean> list){
-        List<DataBean> _List = new ArrayList<DataBean>();
+        List<DataBean> _List = new ArrayList<>();
         Collections.sort(list, new PinyinComparator());
         DataBean dataBean = new DataBean(getFirstCharacter(list.get(0).getItem_en()), "",DataBean.TYPE_CHARACTER);
         String currentCharacter = getFirstCharacter(list.get(0).getItem_en());

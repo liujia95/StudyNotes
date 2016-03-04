@@ -37,7 +37,7 @@ public class SlideBarActivity extends Activity implements AdapterView.OnItemClic
         setData();
     }
     private void setData(){
-        mList = new ArrayList<DataBean>();
+        mList = new ArrayList<>();
         String[] names = getResources().getStringArray(R.array.array_name);
         String[] phones = getResources().getStringArray(R.array.array_phone);
         for(int i=0;i<names.length;i++){
@@ -92,7 +92,7 @@ public class SlideBarActivity extends Activity implements AdapterView.OnItemClic
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent){
-            int type = mData.get(position).getItem_type();
+            int type = mData.get(position)  .getItem_type();
             String name = mData.get(position).getName();
             if(type== DataBean.TYPE_CHARACTER){
                 convertView = View.inflate(mContext, R.layout.item_list_character, null);

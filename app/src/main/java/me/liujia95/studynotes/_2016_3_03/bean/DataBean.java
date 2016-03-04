@@ -4,12 +4,12 @@ import me.liujia95.studynotes._2016_3_03.utils.CharacterParser;
 
 public class DataBean {
 
-    public static final int TYPE_CHARACTER = 0;
-    public static final int TYPE_DATA = 1;
-    private int item_type;
+    public static final int TYPE_CHARACTER = 0; //首字母item的类型
+    public static final int TYPE_DATA = 1;      //数据类型
+    private int item_type;                      //类型
     private String item_en;
-    private String name;
-    private String phone;
+    private String name;                        //姓名
+    private String phone;                       //电话
     /*其他成员*/
 
     public DataBean(String name,String phone,int type){

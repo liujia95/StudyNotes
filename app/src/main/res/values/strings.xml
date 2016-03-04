@@ -55,4 +55,6 @@
         <item>280</item>
     </string-array>
 
+    <string name="hello_world">Hello world!</string>
+    <string name="show">显示</string>
 </resources>
