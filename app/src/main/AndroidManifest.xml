@@ -35,6 +35,10 @@
 
         <activity android:name="._2016_3_03.SlideBarActivity"/>
         <activity android:name="._2016_3_04.TestPointActivity"/>
+
+        <activity android:name="._2016_3_06.activity.MainActivity"/>
+        <activity android:name="._2016_3_06.activity.YoukuMenuActivity"/>
+        <activity android:name="._2016_3_06.activity.SpinnerActivity"/>
     </application>
 
 </manifest>

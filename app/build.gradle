@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "me.liujia95.studynotes"
-        minSdkVersion 14
+        minSdkVersion 15
         targetSdkVersion 22
         versionCode 1
         versionName "1.0"
@@ -26,4 +26,6 @@ dependencies {
     compile 'com.jakewharton:butterknife:5.1.1'
     compile 'cn.dreamtobe.kpswitch:library:1.3.0'
     compile 'com.android.support:recyclerview-v7:22.2.1'
+    compile project(':bubble_notification_lib')
+    compile 'com.nineoldandroids:library:2.4.0'
 }

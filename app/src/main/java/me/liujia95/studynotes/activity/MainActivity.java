@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         mItems.add("2016.3.02 键盘面板冲突");
         mItems.add("2016.3.03 首字母分类索引");
         mItems.add("2016.3.04 未读消息小红点");
+        mItems.add("2016.3.06 自定义组合控件");
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, mItems);
         mListview.setAdapter(adapter);
@@ -68,9 +69,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             case 2:
                 Intent intent2 = new Intent(this, SlideBarActivity.class);
                 startActivity(intent2);
+                break;
             case 3:
                 Intent intent3 = new Intent(this, TestPointActivity.class);
                 startActivity(intent3);
+                break;
+            case 4:
+                Intent intent4 = new Intent(this, me.liujia95.studynotes._2016_3_06.activity.MainActivity.class);
+                startActivity(intent4);
                 break;
         }
     }
