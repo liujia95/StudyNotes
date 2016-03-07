@@ -1,1 +1,1 @@
-include ':app', ':bubble_notification_lib'
+include ':app', ':bubble_notification_lib', ':gradientuilibrary'

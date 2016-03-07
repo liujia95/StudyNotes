@@ -6,4 +6,9 @@
 
     <color name="chatting_list_background">#ebebeb</color>
     <color name="translucent">#00000000</color>
+
+    <color name="tab_bg">#FCFCFC</color>
+    <color name="tab_bg_line">#D7D7D7</color>
+    <color name="tab_bg_green">#45C01A</color>
+    <color name="tab_text_gray">#999999</color>
 </resources>

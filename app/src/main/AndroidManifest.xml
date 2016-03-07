@@ -39,6 +39,8 @@
         <activity android:name="._2016_3_06.activity.MainActivity"/>
         <activity android:name="._2016_3_06.activity.YoukuMenuActivity"/>
         <activity android:name="._2016_3_06.activity.SpinnerActivity"/>
+
+        <activity android:name="._2016_3_07.MainActivity"/>
     </application>
 
 </manifest>

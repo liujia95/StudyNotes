@@ -10,6 +10,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/bubble_notification_lib" />
+            <option value="$PROJECT_DIR$/gradientuilibrary" />
           </set>
         </option>
         <option name="myModules">
@@ -17,6 +18,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/bubble_notification_lib" />
+            <option value="$PROJECT_DIR$/gradientuilibrary" />
           </set>
         </option>
       </GradleProjectSettings>

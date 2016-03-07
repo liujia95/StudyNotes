@@ -28,4 +28,5 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:22.2.1'
     compile project(':bubble_notification_lib')
     compile 'com.nineoldandroids:library:2.4.0'
+    compile project(':gradientuilibrary')
 }
