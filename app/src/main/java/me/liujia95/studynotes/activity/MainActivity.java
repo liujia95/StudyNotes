@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         mItems.add("2016.3.07 仿微信Tab bar");
         mItems.add("2016.3.07pm 仿微信图片选择器");
         mItems.add("2016.3.08 图片的聊天气泡");
+        mItems.add("2016.3.08pm 仿QQ聊天界面");
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, mItems);
         mListview.setAdapter(adapter);
@@ -92,6 +93,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             case 7:
                 Intent intent7 = new Intent(this, me.liujia95.studynotes._2016_3_08.MainActivity.class);
                 startActivity(intent7);
+                break;
+            case 8:
+                Intent intent8 = new Intent(this, me.liujia95.studynotes._2016_3_08pm.MainActivity.class);
+                startActivity(intent8);
                 break;
         }
     }
