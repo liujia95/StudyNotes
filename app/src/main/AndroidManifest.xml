@@ -2,6 +2,9 @@
 <manifest package="me.liujia95.studynotes"
           xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -41,6 +44,9 @@
         <activity android:name="._2016_3_06.activity.SpinnerActivity"/>
 
         <activity android:name="._2016_3_07.MainActivity"/>
+        <activity android:name="._2016_3_07pm.imageloader.MainActivity"/>
+
+        <activity android:name="._2016_3_08.MainActivity"/>
     </application>
 
 </manifest>

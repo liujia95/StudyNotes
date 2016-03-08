@@ -47,6 +47,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         mItems.add("2016.3.04 未读消息小红点");
         mItems.add("2016.3.06 自定义组合控件");
         mItems.add("2016.3.07 仿微信Tab bar");
+        mItems.add("2016.3.07pm 仿微信图片选择器");
+        mItems.add("2016.3.08 图片的聊天气泡");
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, mItems);
         mListview.setAdapter(adapter);
@@ -82,6 +84,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             case 5:
                 Intent intent5 = new Intent(this, me.liujia95.studynotes._2016_3_07.MainActivity.class);
                 startActivity(intent5);
+                break;
+            case 6:
+                Intent intent6 = new Intent(this, me.liujia95.studynotes._2016_3_07pm.imageloader.MainActivity.class);
+                startActivity(intent6);
+                break;
+            case 7:
+                Intent intent7 = new Intent(this, me.liujia95.studynotes._2016_3_08.MainActivity.class);
+                startActivity(intent7);
                 break;
         }
     }
