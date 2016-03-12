@@ -7,6 +7,9 @@ import android.view.View;
 
 import java.util.List;
 
+/**
+ * 表情ViewPager的适配器
+ */
 public class FaceVPAdapter extends PagerAdapter {
 
 	// 界面列表
@@ -31,7 +34,6 @@ public class FaceVPAdapter extends PagerAdapter {
 		if (views != null) {
 			return views.size();
 		}
-
 		return 0;
 	}
 

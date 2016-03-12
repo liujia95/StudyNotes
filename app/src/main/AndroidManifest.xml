@@ -48,6 +48,8 @@
 
         <activity android:name="._2016_3_08.MainActivity"/>
         <activity android:name="._2016_3_08pm.MainActivity"/>
+
+        <activity android:name="._2016_3_10.MainActivity"/>
     </application>
 
 </manifest>

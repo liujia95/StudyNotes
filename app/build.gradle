@@ -29,4 +29,7 @@ dependencies {
     compile project(':bubble_notification_lib')
     compile 'com.nineoldandroids:library:2.4.0'
     compile project(':gradientuilibrary')
+    compile files('libs/hyphenatechat_3.0.0.jar')
+    compile files('libs/glide-3.6.1.jar')
+    compile 'pl.droidsonroids.gif:android-gif-drawable:1.1.14'
 }

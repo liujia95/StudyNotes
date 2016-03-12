@@ -53,17 +53,18 @@ public class MainActivity extends Activity implements OnClickListener, DropdownL
     private MyEditText       input;
     private Button           send;
     private DropdownListView mListView;
-    private ChatLVAdapter    mLvAdapter;
+    private ChatLVAdapter    mLvAdapter;    //会话聊天显示的adapter
 
     private LinearLayout chat_face_container;
     private ImageView    image_face;//表情图标
-    // 7列3行
+    // 6列4行
     private int        columns = 6;
     private int        rows    = 4;
-    private List<View> views   = new ArrayList<View>();
-    private List<String> staticFacesList;
+
+    private List<View> views   = new ArrayList<View>(); //每一页表情的集合
+    private List<String> staticFacesList; //表情的数量
     private LinkedList<ChatInfo> infos = new LinkedList<ChatInfo>();
-    private SimpleDateFormat sd;
+    private SimpleDateFormat sd;    //时间格式转换
 
     private String reply = "";//模拟回复
 
@@ -155,15 +156,23 @@ public class MainActivity extends Activity implements OnClickListener, DropdownL
     private void InitViewPager() {
         // 获取页数
         for (int i = 0; i < getPagerCount(); i++) {
-            views.add(viewPagerItem(i));
+            views.add(viewPagerItem(i));//给每一页添加对应的表情
             LayoutParams params = new LayoutParams(16, 16);
-            mDotsLayout.addView(dotsItem(i), params);
+            mDotsLayout.addView(dotsItem(i), params); //小圆点的显示
         }
+        //给表情Viewpager的适配器添加表情
         FaceVPAdapter mVpAdapter = new FaceVPAdapter(views);
+        //绑定适配器
         mViewPager.setAdapter(mVpAdapter);
+        //默认使圆点选中第一个
         mDotsLayout.getChildAt(0).setSelected(true);
     }
 
+    /**
+     * 根据页数，初始化每页显示的表情
+     * @param position
+     * @return
+     */
     private View viewPagerItem(int position) {
         LayoutInflater inflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
         View layout = inflater.inflate(R.layout.face_gridview, null);//表情布局
@@ -192,9 +201,9 @@ public class MainActivity extends Activity implements OnClickListener, DropdownL
                 try {
                     String png = ((TextView) ((LinearLayout) view).getChildAt(1)).getText().toString();
                     if (!png.contains("emotion_del_normal")) {// 如果不是删除图标
-                        insert(getFace(png));
+                        insert(getFace(png)); //插入表情
                     } else {
-                        delete();
+                        delete(); //删除表情
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -205,6 +214,11 @@ public class MainActivity extends Activity implements OnClickListener, DropdownL
         return gridview;
     }
 
+    /**
+     * 返回的是一个可以和文字并存的图片+文字
+     * @param png
+     * @return
+     */
     private SpannableStringBuilder getFace(String png) {
         SpannableStringBuilder sb = new SpannableStringBuilder();
         try {
@@ -219,7 +233,7 @@ public class MainActivity extends Activity implements OnClickListener, DropdownL
                     new ImageSpan(MainActivity.this, BitmapFactory
                             .decodeStream(getAssets().open(png))), sb.length()
                             - tempText.length(), sb.length(),
-                    Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                    Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);//前后都不包括，即在指定范围的前面和后面插入新字符都不会应用新样式
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -268,7 +282,7 @@ public class MainActivity extends Activity implements OnClickListener, DropdownL
     }
 
     /**
-     * 判断即将删除的字符串是否是图片占位字符串tempText 如果是：则讲删除整个tempText
+     * 判断即将删除的字符串是否是图片占位字符串tempText 如果是：则将删除整个tempText
      **/
     private boolean isDeletePng(int cursor) {
         String st = "#[face/png/f_static_000.png]#";
@@ -409,6 +423,9 @@ public class MainActivity extends Activity implements OnClickListener, DropdownL
         }.start();
     }
 
+    /**
+     * 隐藏软键盘
+     */
     public void hideSoftInputView() {
         InputMethodManager manager = ((InputMethodManager) this.getSystemService(Activity.INPUT_METHOD_SERVICE));
         if (getWindow().getAttributes().softInputMode != WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN) {
